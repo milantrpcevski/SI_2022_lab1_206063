@@ -1,5 +1,6 @@
 Pizza x 1
 Eggs x 10
 Bacon x 5
-Cookies x 10
-Tacos x 3
+Brownies x 10
+Tacos x 5
+Juice x 1
