@@ -1,0 +1,140 @@
+Чекор 3: 
+git clone https://github.com/milantrpcevski/SI_2022_lab1_206063.git 
+Чекор 4:
+cd SI_2022_lab1_206063.git 
+Чекор 5:
+touch shopping_list.txt
+vim shopping_list.txt - ги додавам продукти
+git add shopping_list.txt
+git commit -m "Add 5 items to the shopping list"
+Чекор 6:
+vim shopping_list.txt - ги додавам продукти
+git add shopping_list.txt
+git commit -m "Add quantities to the items"
+Чекор 7:
+git branch branch2
+git branch branch1
+додавање на 2 гранки
+Чекор 8:
+$ git log
+commit 11cf99471921c5bd9aed118cbf2147745271b824 (HEAD -> master, branch2, branch1)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:26:55 2022 +0100
+
+    Add quantities to the items.
+
+commit 855c2ff323d5c8965a8efcc496bdb453e5ce30ad
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:25:48 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 1204cc867302038d3ec37b106e1368b798b648d1 (origin/master)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:12:36 2022 +0100
+
+    Initial commit
+Чекор 9:
+git push origin master
+git push origin branch2
+git push origin branch1
+Синхронизирање
+Чекор 10:
+git checkout branch1
+Префрлување на друга гранка
+Чекор 11:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #5”
+Чекор 12:
+git checkout master
+Чекор 13:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #2”
+Чекор 14:
+git push origin master
+git push origin branch2
+git push origin branch1
+Синхронизирање
+Чекор 15:
+git branch branch2
+Друга гранка
+Чекор 16:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #5”
+Чекор 17:
+$ git log
+commit 938cfe41e9b3e9ae369c87b8bc78e933ff5bf8a3 (HEAD -> branch2)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:42:24 2022 +0100
+
+    Modify item #4
+
+commit 11cf99471921c5bd9aed118cbf2147745271b824 (origin/branch2)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:26:55 2022 +0100
+
+    Add quantities to the items.
+
+commit 855c2ff323d5c8965a8efcc496bdb453e5ce30ad
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:25:48 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 1204cc867302038d3ec37b106e1368b798b648d1
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:12:36 2022 +0100
+
+    Initial commit
+Чекор 18:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit --amend -m "Modify item #4 and add item #6"
+Чекор 19:
+$ git log
+commit db031394a7c890b9d68599ae11ffdf362ce6fbcd (HEAD -> branch2)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:42:24 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 11cf99471921c5bd9aed118cbf2147745271b824 (origin/branch2)
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:26:55 2022 +0100
+
+    Add quantities to the items.
+
+commit 855c2ff323d5c8965a8efcc496bdb453e5ce30ad
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:25:48 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 1204cc867302038d3ec37b106e1368b798b648d1
+Author: milantrpcevski <milan.trpchevski@students.finki.ukim.mk>
+Date:   Tue Mar 15 17:12:36 2022 +0100
+
+    Initial commit
+Чекор 20:
+git checkout master
+
+git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Рекурзивно спојување на гранките.
+Чекор 21:
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Конфликт кој го решив со промена на фајлот и правење на commit.
+Чекор 22:
+git add 206063.txt
+git commit -m "Add docs"
+Чекор 23:
+git push origin master
